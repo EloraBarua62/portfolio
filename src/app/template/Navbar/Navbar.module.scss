@@ -1,0 +1,170 @@
+// Navbar section design
+.navbar_common {
+  background-color: var(--black2);
+
+  // Header section design
+  .header_section {
+    width: 100%;
+    height: 60px;
+    background-color: var(--black3);
+    position: relative;
+
+    // Toggle button design
+    .toggle_button {
+      position: absolute;
+      top: 23px;
+      cursor: pointer;
+      span {
+        width: 20px;
+        height: 3px;
+        background-color: rgba(255, 255, 255, 0.637);
+        transition: 0.5s;
+      }
+    }
+    .toggle_button:hover {
+      span {
+        background-color: white;
+      }
+    }
+  }
+
+  //   Navigation section design for small device
+  .navigation_section_small {
+    width: 100%;
+    height: 100px;
+    opacity: 1;
+    position: relative;
+
+    // Routing page naming design
+    .routing_page {
+      position: absolute;
+      top: 60px;
+      color: rgba(255, 255, 255, 0.637);
+      transform: rotate(90deg);
+      transition: 0.5s;
+      cursor: pointer;
+      width: 80px;
+    }
+    .routing_page:hover {
+      color: white;
+    }
+  }
+
+  //   Navigation section design for large device
+  .navigation_section_large {
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+
+      @for $i from 1 through 3 {
+        .routes:nth-child(3n + #{$i}) {            
+          text-decoration: none;
+          position: absolute;
+          top: #{$i * 40}#{"px"};
+          opacity: 1;
+          color: rgba(255, 255, 255, 0.637);
+          animation: smoothmoveright #{$i * 0.5}#{"s"};
+          @keyframes smoothmoveright {
+            from {
+              left: 20px;
+            }
+            to {
+              left: 40px;
+            }
+          }
+        }
+      }
+  }
+}
+
+// navbar before toggle
+.navbar_small {
+  width: 80px;
+  transition: 0.5s;
+
+  // Toggle button design
+  .toggle_button {
+    left: 30px;
+    .top_line {
+      position: absolute;
+      top: 0;
+    }
+    .middle_line {
+      position: absolute;
+      top: 6px;
+    }
+    .bottom_line {
+      position: absolute;
+      top: 12px;
+    }
+  }
+}
+
+// navbar after toggle
+.navbar_large {
+  width: 250px;
+  transition: 0.5s;
+
+  .toggle_button {
+    left: 20px;
+    .top_line {
+      position: absolute;
+      top: 0;
+      transform: rotate(-45deg);
+    }
+    .bottom_line {
+      position: absolute;
+      top: 0;
+      transform: rotate(45deg);
+    }
+    .middle_line {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  }
+
+  .navigation_section_small {
+    opacity: 0;
+  }
+
+  // Navigation section design for large device
+  .navigation_section_large {
+    opacity: 1;
+
+      @for $i from 1 through 3 {
+        .routes:nth-child(3n + #{$i}) {
+          position: absolute;
+          top: #{$i * 40}#{"px"};
+          left: 20px;
+          color: rgba(255, 255, 255, 0.637);
+          transition: 0.5s;
+          cursor: pointer;
+          &:hover {
+            color: white;
+          }
+
+          animation: smoothmoveleft #{$i * 0.5}#{"s"};
+          @keyframes smoothmoveleft {
+            from {
+              left: 40px;
+            }
+            to {
+              left: 20px;
+            }
+          }
+        }
+      }
+
+    // li:nth-child(3n + 1) {
+    //   background-color: red;
+    // }
+
+    // li:nth-child(3n + 2) {
+    //   background-color: #004d99;
+    // }
+
+    // li:nth-child(3n + 3) {
+    //   background-color: green;
+    // }
+  }
+}
