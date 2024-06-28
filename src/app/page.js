@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Banner from "./template/Banner/Banner";
 import MyProjects from "./template/MyProjects/MyProjects";
+import CountDetails from "./template/CountDetails/CountDetails";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <Banner/>
 
         {/* Count up */}
+        {/* <CountDetails/> */}
 
         {/* Projects */}
         <MyProjects/>

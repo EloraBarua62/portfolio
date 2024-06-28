@@ -16,6 +16,7 @@ body {
   .sidebar_section {
     width: 300px;
     position: fixed;
+    z-index: 5;
 
     // Language proficiency display
     .english {
@@ -93,7 +94,7 @@ body {
     margin-left: auto;
 
     @media (min-width: 768px) {
-      width: calc(100% - 300px);
+      width: calc(100% - 380px);
     }
 
     .main_section_design {
@@ -109,6 +110,13 @@ body {
         height: 200px;
         overflow: hidden;
         position: relative;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 10px 10px 2px rgba(25, 190, 182, 0.141), 0 8px 10px -6px rgba(8, 237, 225, 0.737);
+
+        @media screen and (min-width: 480px) {
+          margin-bottom: 20px;
+        }
         @media screen and (min-width: 768px) {
           width: 400px;
           height: 300px;
@@ -117,10 +125,6 @@ body {
         .image_setup {
           width: 100%;
           height: auto;
-          margin-bottom: 10px;
-          @media screen and (min-width: 480px) {
-            margin-bottom: 20px;
-          }
         }
         .dhruva {
           transition: 2s;
@@ -131,7 +135,7 @@ body {
         .apparel {
           transition: 2s;
           &:hover {
-            transform: translateY(-5%);
+            transform: translateY(-5px);
           }
         }
         .compact {

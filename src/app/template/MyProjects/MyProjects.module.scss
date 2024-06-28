@@ -1,6 +1,26 @@
 .project_showcase_section {
   width: 100%;
+  margin-top: 50px;
 
+  @media (min-width: 768px) {
+    margin-top: 100px;
+  }
+
+  .heading{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+  }
   .project_display_container {
     width: 100%;
     display: flex;
@@ -17,50 +37,113 @@
         justify-content: space-between;
       }
 
-      svg {
-        width: 30px;
-        height: 30px;
-        transform: rotate(-90deg);
-
-        .progress_cycle {
-          stroke-width: 20;
-          stroke: var(--black4);
-          fill: transparent;
-          stroke-dasharray: 502;
-          stroke-dashoffset: 502;
-          stroke-linecap: round;
-          animation: animate-cycle 1s linear forwards;
-          @keyframes animate-cycle {
-            100% {
-               stroke-dashoffset: -1;
-            }
-          }
-
+      .divider {
+        width: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .pulse {
+          position: relative;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: #0ef;
         }
 
-        .path {
-          stroke-width: 20;
-          stroke: #0ef;
-          fill: transparent;
-          stroke-dasharray: 502;
-          stroke-dashoffset: 502;
-          stroke-linecap: round;
-          animation: animate-path 1s 1s linear forwards;
-      @keyframes animate-path {
-        100% {
-          stroke-dashoffset: 1;
+        .ruler {
+          width: 5px;
+          height: 100%;
+          background-color: var(--black2);
         }
       }
-        }
-      }
-      
+
       .project_info {
         width: 400px;
         color: white;
-        background-color: rgb(64, 183, 222);
-        margin-bottom: 10px;
-        @media screen and (min-width: 480px) {
-          margin-bottom: 20px;
+        margin-bottom: 60px;
+        @media (min-width: 480px) {
+          margin-bottom: 100px;
+        }
+
+        .title {
+          font-size: 20px;
+          font-weight: 600;
+          color: #0ef;
+          margin-bottom: 10px;
+          line-height: 18px;
+
+          @media (min-width: 768px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+          @media (min-width: 1440px) {
+            font-size: 30px;
+          }
+        }
+        // .details {
+        //   overflow: hidden;
+        //   display: -webkit-box;
+        //   -webkit-line-clamp: 3; /* number of lines to show */
+        //   line-clamp: 2;
+        //   -webkit-box-orient: vertical;
+        // }
+
+        .tech{
+          text-decoration: underline;
+          margin-top: 10px;
+          color: rgba(255, 255, 255, 0.637);
+        }
+        .technology_details{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 20px;
+          
+        }
+
+        .link_section{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          color: white;
+          margin-top: 30px;        
+
+          .link_decoration{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            transition: .5s;
+            margin-left: 4px;
+            margin-right: 16px;
+
+            &:hover{
+              color: #0ef;
+            }
+          }
+        }
+      }
+    }
+
+    .project_info_section:hover {
+      span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--black5);
+        border-radius: inherit;
+        opacity: 0.8;
+        animation: pulseAnimate 1s ease-out infinite;
+
+        @keyframes pulseAnimate {
+          100% {
+            opacity: 0;
+            transform: scale(2);
+          }
         }
       }
     }

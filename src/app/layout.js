@@ -18,10 +18,8 @@ export default function RootLayout({ children }) {
           <Sidebar />
         </div>
 
-        <div className="content_section">
-          {children}
-          <Navbar/>
-        </div>
+        <div className="content_section">{children}</div>
+        <Navbar />
       </body>
     </html>
   );
