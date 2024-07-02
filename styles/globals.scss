@@ -14,6 +14,7 @@ body {
   // }
 
   .sidebar_section {
+    // height: 100%;
     width: 300px;
     position: fixed;
     z-index: 5;
@@ -104,6 +105,13 @@ body {
       padding: 0 20px 20px;
       background: #31313130;
 
+      @media (min-width: 768px) {
+        padding: 0 30px 20px;
+      }
+      @media (min-width: 1440px) {
+        padding: 0 40px 20px;
+      }
+
       // Projects Display: hover auto scroll effect
       .project_image_display {
         width: 300px;
@@ -112,14 +120,17 @@ body {
         position: relative;
         margin-bottom: 10px;
         border-radius: 5px;
-        box-shadow: 0px 10px 10px 2px rgba(25, 190, 182, 0.141), 0 8px 10px -6px rgba(8, 237, 225, 0.737);
+        box-shadow: 0 10px 25px rgba(252, 251, 251, 0.068);
+
+        // box-shadow: 0px 10px 10px 2px rgba(254, 254, 254, 0.141),
+        //   0 8px 10px -6px rgba(252, 252, 252, 0.737);
 
         @media screen and (min-width: 480px) {
           margin-bottom: 20px;
         }
         @media screen and (min-width: 768px) {
           width: 400px;
-          height: 300px;
+          height: 250px;
         }
 
         .image_setup {
@@ -129,7 +140,7 @@ body {
         .dhruva {
           transition: 2s;
           &:hover {
-            transform: translateY(-41%);
+            transform: translateY(-50%);
           }
         }
         .apparel {
@@ -141,7 +152,7 @@ body {
         .compact {
           transition: 2.5s;
           &:hover {
-            transform: translateY(-80%);
+            transform: translateY(-85%);
           }
         }
         .notefriend {

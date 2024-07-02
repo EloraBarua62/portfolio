@@ -1,6 +1,7 @@
 // Navbar section design
 .navbar_common {
   background-color: var(--black2);
+  font-size: 14px;
 
   // Header section design
   .header_section {
@@ -56,8 +57,8 @@
     opacity: 0;
     transition: 0.5s;
 
-      @for $i from 1 through 3 {
-        .routes:nth-child(3n + #{$i}) {            
+      @for $i from 1 through 4 {
+        .routes:nth-child(4n + #{$i}) {            
           text-decoration: none;
           position: absolute;
           top: #{$i * 40}#{"px"};
@@ -130,9 +131,10 @@
   // Navigation section design for large device
   .navigation_section_large {
     opacity: 1;
+    
 
-      @for $i from 1 through 3 {
-        .routes:nth-child(3n + #{$i}) {
+      @for $i from 1 through 4 {
+        .routes:nth-child(4n + #{$i}) {
           position: absolute;
           top: #{$i * 40}#{"px"};
           left: 20px;

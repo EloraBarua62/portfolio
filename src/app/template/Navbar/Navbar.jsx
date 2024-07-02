@@ -11,17 +11,22 @@ const Navbar = () => {
     const page_navigation = [
       {
         name: "/",
-        title: "Home",
+        title: "HOME",
         class: 'home',
       },
       {
+        name: "/my-projects",
+        title: "PROJECTS",
+        class: 'projects',
+      },
+      {
         name: "/about-me",
-        title: "About Me",
+        title: "ABOUT ME",
         class: 'about_me',
       },
       {
         name: "/blog",
-        title: "Blog",
+        title: "BLOG",
         class: 'blog',
       },
     ];
