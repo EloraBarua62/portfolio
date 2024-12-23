@@ -7,7 +7,7 @@
   left: -100%; // Off-screen by default
   transition: left 0.5s ease-in-out;
   overflow: hidden;
-  // display: block;
+  display: block;
 
   &.open {
     left: 0; // Slide in
@@ -16,294 +16,293 @@
     left: -100%; // Slide out
   }
 
-    @media (min-width: 768px){
-      // display: none;
-    
   // Profile section design
-    .profile_section {
-      width: 300px;
-      background-color: var(--black3);
-      // margin-top: 15px;
-      padding: 20px 0;
-      position: relative;
-      top: 0;
+  .profile_section {
+    width: 300px;
+    background-color: var(--black3);
+    // margin-top: 15px;
+    padding: 20px 0;
+    position: relative;
+    top: 0;
 
-      // Profile picture: parent
-      .profile_container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    // Profile picture: parent
+    .profile_container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        // Profile picture: child
-        .picture_setup_container {
-          width: 100px;
-          height: 100px;
-          overflow: hidden;
-          border: 0;
-          border-radius: 50%;
+      // Profile picture: child
+      .picture_setup_container {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border: 0;
+        border-radius: 50%;
 
-          // Profile image
-          .picture_design {
-            width: 100%;
-            object-fit: cover;
-          }
+        // Profile image
+        .picture_design {
+          width: 100%;
+          object-fit: cover;
         }
-      }
-
-      // My name
-      h3 {
-        text-align: center;
-        margin: 10px 0 2px;
-      }
-
-      // My designation
-      p {
-        text-align: center;
-        color: rgba(255, 255, 255, 0.637);
-        font-weight: 300;
-        margin: 0;
-        font-size: 14px;
       }
     }
 
-    // General Info
-    .general_info_scrol_section {
-      width: 100%;
-      height: 59%;
-      overflow-y: auto;
-      scrollbar-color: #0ef transparent;
-      scrollbar-width: thin;
+    // My name
+    h3 {
+      text-align: center;
+      margin: 10px 0 2px;
+    }
 
-      // @media (min-width: 1024px) {
-      //   height: 70%;
-      // }
-      @media (min-width: 1440px) {
-        height: 65%;
-      }
+    // My designation
+    p {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.637);
+      font-weight: 300;
+      margin: 0;
+      font-size: 14px;
+    }
+  }
 
-      // Bio data design
-      .bio_data_section {
-        margin: 20px 20px 0;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.223);
+  // General Info
+  .general_info_scrol_section {
+    width: 100%;
+    height: 59%;
+    overflow-y: auto;
+    scrollbar-color: #0ef transparent;
+    scrollbar-width: thin;
 
-        .details {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 5px;
+    // @media (min-width: 1024px) {
+    //   height: 70%;
+    // }
+    @media (min-width: 1440px) {
+      height: 65%;
+    }
 
-          .value {
-            color: rgba(255, 255, 255, 0.637);
-          }
-        }
-      }
+    // Bio data design
+    .bio_data_section {
+      margin: 20px 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.223);
 
-      //Language Performance Details Section
-      .lang_section {
-        margin: 20px 20px 0;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.223);
+      .details {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
+        margin-bottom: 5px;
 
         .value {
-          position: absolute;
-          top: 22px;
-          margin-left: 18px;
-          font-size: 12px;
-          animation: showPercentage 0.5s 1s linear forwards;
-          opacity: 0;
+          color: rgba(255, 255, 255, 0.637);
+        }
+      }
+    }
 
-          @keyframes showPercentage {
+    //Language Performance Details Section
+    .lang_section {
+      margin: 20px 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.223);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      .value {
+        position: absolute;
+        top: 22px;
+        margin-left: 18px;
+        font-size: 12px;
+        animation: showPercentage 0.5s 1s linear forwards;
+        opacity: 0;
+
+        @keyframes showPercentage {
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+      // Radical/cycle progress design
+      svg {
+        width: 60px;
+        height: 60px;
+        transform: rotate(-90deg);
+
+        .progress_cycle {
+          stroke-width: 10;
+          stroke: var(--black4);
+          fill: transparent;
+          stroke-dasharray: 502;
+          stroke-dashoffset: 502;
+          stroke-linecap: round;
+          animation: animate-bar 1s linear forwards;
+          @keyframes animate-bar {
+            100% {
+              stroke-dashoffset: -1;
+            }
+          }
+        }
+
+        .path {
+          stroke-width: 10;
+          stroke: #0ef;
+          fill: transparent;
+          stroke-dasharray: 502;
+          stroke-dashoffset: 502;
+          stroke-linecap: round;
+        }
+      }
+      .title {
+        text-align: center;
+      }
+    }
+
+    // Programming language section design
+    .programming_lang_section {
+      margin: 20px 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.223);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      // Each language section
+      .each_lang_section {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        // Progess line design
+        .progress_line {
+          width: 100%;
+          height: 5px;
+          position: relative;
+          border-radius: 10px;
+          background-color: var(--black4);
+          animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+          transform: scaleX(0);
+          transform-origin: left;
+
+          @keyframes animate {
+            100% {
+              transform: scaleX(1);
+            }
+          }
+
+          // Additional class with progress_line to provide separate property along with common
+          span {
+            height: 5px;
+            position: absolute;
+            border-radius: 10px;
+            background-color: #0ef;
+            animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+          }
+
+          span::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            animation: showText 0.5s 1.5s linear forwards;
+            opacity: 0;
+          }
+          span::after {
+            position: absolute;
+            padding: 1px 8px;
+            color: white;
+            font-size: 12px;
+            border-radius: 3px;
+            top: -25px;
+            right: -20px;
+            animation: showText 0.5s 1.5s linear forwards;
+            opacity: 0;
+          }
+
+          @keyframes showText {
             100% {
               opacity: 1;
             }
           }
         }
-        // Radical/cycle progress design
-        svg {
-          width: 60px;
-          height: 60px;
-          transform: rotate(-90deg);
-
-          .progress_cycle {
-            stroke-width: 10;
-            stroke: var(--black4);
-            fill: transparent;
-            stroke-dasharray: 502;
-            stroke-dashoffset: 502;
-            stroke-linecap: round;
-            animation: animate-bar 1s linear forwards;
-            @keyframes animate-bar {
-              100% {
-                stroke-dashoffset: -1;
-              }
-            }
-          }
-
-          .path {
-            stroke-width: 10;
-            stroke: #0ef;
-            fill: transparent;
-            stroke-dasharray: 502;
-            stroke-dashoffset: 502;
-            stroke-linecap: round;
-          }
-        }
-        .title {
-          text-align: center;
-        }
-      }
-
-      // Programming language section design
-      .programming_lang_section {
-        margin: 20px 20px 0;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.223);
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        // Each language section
-        .each_lang_section {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-
-          // Progess line design
-          .progress_line {
-            width: 100%;
-            height: 5px;
-            position: relative;
-            border-radius: 10px;
-            background-color: var(--black4);
-            animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-            transform: scaleX(0);
-            transform-origin: left;
-
-            @keyframes animate {
-              100% {
-                transform: scaleX(1);
-              }
-            }
-
-            // Additional class with progress_line to provide separate property along with common
-            span {
-              height: 5px;
-              position: absolute;
-              border-radius: 10px;
-              background-color: #0ef;
-              animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-              transform: scaleX(0);
-              transform-origin: left;
-            }
-
-            span::before {
-              content: "";
-              position: absolute;
-              width: 0;
-              height: 0;
-              animation: showText 0.5s 1.5s linear forwards;
-              opacity: 0;
-            }
-            span::after {
-              position: absolute;
-              padding: 1px 8px;
-              color: white;
-              font-size: 12px;
-              border-radius: 3px;
-              top: -25px;
-              right: -20px;
-              animation: showText 0.5s 1.5s linear forwards;
-              opacity: 0;
-            }
-
-            @keyframes showText {
-              100% {
-                opacity: 1;
-              }
-            }
-          }
-        }
-      }
-
-      // Other special property
-      .other_special_section {
-        margin: 20px 20px 0;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.223);
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-
-        .special_property {
-          width: 100%;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          gap: 20px;
-
-          .icon_design {
-            color: #0ef;
-            font-size: 20px;
-          }
-        }
-      }
-
-      // Resume download section
-      .resume_download {
-        margin: 20px;
-
-        .button_design {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          gap: 10px;
-          background-color: transparent;
-          border: 0;
-          font-size: 16px;
-          color: white;
-          transition: 0.5s;
-        }
-        .button_design:hover {
-          color: rgba(255, 255, 255, 0.637);
-          cursor: pointer;
-        }
       }
     }
 
-    // Footer Section
-    .footer_section {
-      width: 100%;
+    // Other special property
+    .other_special_section {
+      margin: 20px 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.223);
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: var(--black3);
-      position: absolute;
-      bottom: 0;
+      flex-direction: column;
+      gap: 5px;
 
-      .icon {
-        // margin: 0;
+      .special_property {
+        width: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 5px;
-        padding: 11px 20px;
-        color: rgba(255, 255, 255, 0.637);
-        transition: 0.5s;
-        h4 {
-          margin: 0;
-          font-weight: 300;
+        gap: 20px;
+
+        .icon_design {
+          color: #0ef;
+          font-size: 20px;
         }
       }
-      .icon:hover {
+    }
+
+    // Resume download section
+    .resume_download {
+      margin: 20px;
+
+      .button_design {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        background-color: transparent;
+        border: 0;
+        font-size: 16px;
         color: white;
+        transition: 0.5s;
+      }
+      .button_design:hover {
+        color: rgba(255, 255, 255, 0.637);
         cursor: pointer;
       }
     }
+  }
+
+  // Footer Section
+  .footer_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black3);
+    position: absolute;
+    bottom: 0;
+
+    .icon {
+      // margin: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      padding: 11px 20px;
+      color: rgba(255, 255, 255, 0.637);
+      transition: 0.5s;
+      h4 {
+        margin: 0;
+        font-weight: 300;
+      }
+    }
+    .icon:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+  @media (min-width: 768px) {
+    display: none;
   }
 }

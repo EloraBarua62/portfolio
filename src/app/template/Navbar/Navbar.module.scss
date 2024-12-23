@@ -3,6 +3,7 @@
   background-color: var(--black2);
   font-size: 14px;
   display: none;
+  overflow-x: hidden;
 
   @media (min-width: 768px) {
     display: block;
@@ -164,20 +165,9 @@
           to {
             left: 20px;
           }
+          
         }
       }
     }
-
-    // li:nth-child(3n + 1) {
-    //   background-color: red;
-    // }
-
-    // li:nth-child(3n + 2) {
-    //   background-color: #004d99;
-    // }
-
-    // li:nth-child(3n + 3) {
-    //   background-color: green;
-    // }
   }
 }
