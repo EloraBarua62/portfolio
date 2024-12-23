@@ -339,3 +339,49 @@ export const myProjects = [
     end_date: "December 24, 2022",
   },
 ];
+
+
+export const myHistory = [
+  {
+    name: 'Abo Akademi University',
+    title: 'MSc in Information Technology',
+    duration: '2024 - 2026',
+    learning: 'Data Science, Machine Learning, Project Course, Artificial Intelligence, Computer Vision, Software Engineering',
+    certificate: ''
+  },
+  {
+    name: 'Programming Hero',
+    title: 'Full Stack Web Development',
+    duration: '2024 - 2026',
+    learning: 'Data Science, Machine Learning, Project Course, Artificial Intelligence, Computer Vision, Software Engineering',
+    certificate: ''
+  },
+  {
+    name: 'Sythet Engineering College',
+    title: 'BSc in Computer Science & Engineering',
+    duration: '2017 - 2022',
+    learning: 'Basic Programming, OOP, Data Structure & Algorithm, Database, Basic Artificial Intelligence, Software Engineering',
+    certificate: ''
+  },
+  {
+    name: 'Codechemist',
+    title: 'Junior Software Engineer',
+    duration: '2024 - 2026',
+    learning: 'Redux, NextJS, MySQL',
+    certificate: ''
+  },
+  {
+    name: 'Dhrubo Parishad',
+    title: 'Web Developer',
+    duration: '2024 - 2026',
+    learning: 'NextJS, NodeJS, MongoDB',
+    certificate: ''
+  },
+  {
+    name: 'Solutya Private Limited',
+    title: 'Software Eningeer Intern',
+    duration: 'Nov 2022 - Jan 2023',
+    learning: 'NextJS, MaterialUI, SCSS',
+    certificate: ''
+  },
+];

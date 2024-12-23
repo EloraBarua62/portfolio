@@ -6,9 +6,8 @@ function splitString(inputString) {
   
   while ((match = regex.exec(inputString)) !== null) {
     characters.push(match[0]);
-    console.log(match[0])
+
   }
-  console.log(characters);
   return characters;
 }
 

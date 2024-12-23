@@ -1,22 +1,31 @@
 .sidebar_section {
-  display: none;
+  height: calc(100vh - 60px);
+  background-color: var(--black2);
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  left: -100%; // Off-screen by default
+  transition: left 0.5s ease-in-out;
+  overflow: hidden;
+  // display: block;
 
-  @media (min-width: 768px) {
-    display: block;
-    height: 97vh;
-    background-color: var(--black2);
-    color: white;
-    font-size: 14px;
-    position: relative;
-    overflow: hidden;
+  &.open {
+    left: 0; // Slide in
+  }
+  &.close {
+    left: -100%; // Slide out
+  }
 
-    // Profile section design
+    @media (min-width: 768px){
+      // display: none;
+    
+  // Profile section design
     .profile_section {
       width: 300px;
       background-color: var(--black3);
       // margin-top: 15px;
       padding: 20px 0;
-      position: sticky;
+      position: relative;
       top: 0;
 
       // Profile picture: parent

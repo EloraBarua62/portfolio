@@ -1,0 +1,60 @@
+.prev_skill_section {
+  border: 2px white;
+  // position: relative;
+  // width: 100%;
+  // margin-top: 50px;
+
+  // @media (min-width: 768px) {
+  //   margin-top: 100px;
+  // }
+  // @media (min-width: 1440px) {
+  //   width: 1000px;
+  //   margin: 100px auto 0px;
+  // }
+
+  .heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 24px;
+    }
+  }
+
+  // Parent skill container
+  @for $i from 1 through 3 {
+    .parent_skill_design:nth-child(3n + #{$i}) {
+      position: relative;
+
+      .skill_design {
+        background-color: var(--black5);
+        min-width: 300px;
+        min-height: 300px;
+        .title {
+          color: white;
+        }
+        .short_details {
+          color: wheat;
+        }
+      }
+
+      &:hover {
+        .popup_design {
+          position: absolute;
+          top: 0;
+          right: 0;
+          min-width: 300px;
+          background-color: azure;
+          // transform: translateY(-10px); // Smooth animation start point
+          // transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./Sidebar.module.scss";
+import styles from "./DrawerSidebar.module.scss";
 import profile from "../../../../public/profile.jpg";
 import {
   bioDataDetails,
@@ -13,11 +13,12 @@ import { TiTick } from "react-icons/ti";
 import { FaDownload } from "react-icons/fa6";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
+// `${styles.sidebar_section} ${openLeftSidebar ? styles.open : styles.close}`;
 
-
-const Sidebar = () => {
+const DrawerSidebar = ({openLeftSidebar}) => {
+  console.log(openLeftSidebar)
   return (
-    <div className={styles.sidebar_section}>
+    <div className={`${styles.sidebar_section} ${openLeftSidebar? styles.open: styles.close}`}>
       {/* Sidebar header */}
       <div className={styles.profile_section}>
         {/* Profile picture */}
@@ -118,14 +119,12 @@ const Sidebar = () => {
           <FaLinkedinIn />
         </div>
         <div className={styles.icon}>
-          <h4>
-            Github
-          </h4>
-        <FaGithub />
-      </div>
+          <h4>Github</h4>
+          <FaGithub />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default DrawerSidebar;

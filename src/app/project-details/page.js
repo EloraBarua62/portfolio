@@ -54,6 +54,8 @@ const ProjectDetails = () => {
             <Image
               src={item.slide1}
               alt=""
+              sizes="100%"
+            priority={true}
               className={styles.slider_image_design}
             />
           </div>
@@ -61,6 +63,8 @@ const ProjectDetails = () => {
             <Image
               src={item.slide2}
               alt=""
+              sizes="100%"
+            priority={true}
               className={styles.slider_image_design}
             />
           </div>
@@ -68,6 +72,8 @@ const ProjectDetails = () => {
             <Image
               src={item.slide3}
               alt=""
+              sizes="100%"
+            priority={true}
               className={styles.slider_image_design}
             />
           </div>
