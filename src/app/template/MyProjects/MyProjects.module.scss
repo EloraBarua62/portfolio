@@ -26,20 +26,24 @@
   }
   .project_display_container {
     width: 100%;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: start;
     @media (min-width: 834px) {
+      height: 350px;
       justify-content: space-between;
     }
     @media (min-width: 1024px) {
+      height: 500px;
       justify-content: center;
     }
     @media (min-width: 1300px) {
+      height: 350px;
       justify-content: space-between;
     }
 
-     .single_column_divider {
+    .single_column_divider {
       display: block;
       width: 20px;
       height: 100%;
@@ -47,13 +51,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // background-color: red;
 
       @media (min-width: 834px) {
         display: none;
       }
       @media (min-width: 1024px) {
-       display: block;
+        display: block;
       }
       @media (min-width: 1300px) {
         display: none;
@@ -79,30 +82,20 @@
       }
 
       .single_column_ruler {
-        // display: block;
-        width: 5px;
-        height: 100%;
+        width: 2px;
+        height: calc(100% - 16px);
         background-color: var(--black2);
-        // @media (min-width: 834px) {
-        //   display: none;
-        // }
-        // @media (min-width: 1024px) {
-        //   display: block;
-        // }
-        // @media (min-width: 1300px) {
-        //   display: none;
-        // }
       }
     }
 
-    .project_info_section {
+    .project_info_section:nth-child(even) {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-     
+      // border: 1px solid red;
 
       @media (min-width: 834px) {
         flex-direction: row;
@@ -115,16 +108,24 @@
       @media (min-width: 1300px) {
         flex-direction: row;
         justify-content: space-between;
-        border: 3px solid;
       }
 
       .multi_column_divider {
-        // width: 40px;
         height: 100%;
         display: flex;
-        // flex-direction: column;
-        // justify-content: center;
         align-items: center;
+        display: none;
+        // border: 1px solid wheat;
+
+        @media (min-width: 834px) {
+          display: block;
+        }
+        @media (min-width: 1024px) {
+          display: none;
+        }
+        @media (min-width: 1300px) {
+          display: block;
+        }
 
         .multi_column_pulse {
           position: relative;
@@ -132,42 +133,20 @@
           height: 16px;
           border-radius: 50%;
           background-color: #0ef;
-
-          // @media (min-width: 834px) {
-          //   display: block;
-          // }
-          // @media (min-width: 1024px) {
-          //   display: none;
-          // }
-          // @media (min-width: 1300px) {
-          //   display: block;
-          // }
         }
 
         .multi_column_ruler {
-          // position: relative;
-          width: 5px;
+          width: 3px;
           height: 100%;
-          background-color: var(--black2);
+          background-color: var(--black4);
           margin: 0 auto;
-          // @media (min-width: 834px) {
-          //   display: block;
-          //   height: 100%;
-          // }
-          // @media (min-width: 1024px) {
-          //   display: none;
-          // }
-          // @media (min-width: 1300px) {
-          //   display: block;
-          //   height: 100%;
-          // }
         }
       }
 
       .project_info {
         width: 400px;
         color: white;
-        margin-bottom: 60px;
+        margin: 0 auto;
         text-align: center;
         @media (min-width: 480px) {
           margin-bottom: 100px;
@@ -264,6 +243,25 @@
       }
     }
 
+    .project_info_section:nth-child(odd) {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+
+      @media (min-width: 834px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      @media (min-width: 1024px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+      @media (min-width: 1300px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
     .project_info_section:hover {
       span {
         position: absolute;
@@ -282,7 +280,24 @@
         }
       }
     }
+  }
 
-   
+  .project_display_container:hover {
+    span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--black5);
+      border-radius: inherit;
+      opacity: 0.8;
+      animation: pulseAnimate 1s ease-out infinite;
+
+      @keyframes pulseAnimate {
+        100% {
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
+    }
   }
 }

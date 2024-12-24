@@ -112,10 +112,7 @@ body {
         background: #31313130;
 
         @media (min-width: 768px) {
-          padding: 0 30px 20px;
-        }
-        @media (min-width: 1440px) {
-          padding: 0 40px 20px;
+          padding: 0 20px 20px;
         }
 
         // Projects Display: hover auto scroll effect
@@ -124,7 +121,8 @@ body {
           height: 200px;
           overflow: hidden;
           position: relative;
-          margin-bottom: 10px;
+          margin: 0 auto 10px;
+          // margin-bottom: 10px;
           border-radius: 5px;
           box-shadow: 0 10px 25px rgba(252, 251, 251, 0.068);
 
