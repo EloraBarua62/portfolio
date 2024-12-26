@@ -67,17 +67,10 @@
   // General Info
   .general_info_scrol_section {
     width: 100%;
-    height: 59%;
+    height: calc(100% - 241px);
     overflow-y: auto;
     scrollbar-color: #0ef transparent;
     scrollbar-width: thin;
-
-    // @media (min-width: 1024px) {
-    //   height: 70%;
-    // }
-    @media (min-width: 1440px) {
-      height: 65%;
-    }
 
     // Bio data design
     .bio_data_section {
