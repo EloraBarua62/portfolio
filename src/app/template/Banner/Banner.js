@@ -36,22 +36,6 @@ const Banner = () => {
         {/* Heading */}
         <div className={styles.initial_text}>ELORA BARUA</div>
 
-        {/* <motion.div
-          initial="hidden"
-          whileInView="reveal"
-          transition={{ staggerChildren: 0.2 }}
-          className={styles.initial_text}
-        >
-          {headingChars.map((char, index) => (
-            <motion.span
-              key={index}
-              transition={{ duration: 1.5 }}
-              variants={charVariants}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </motion.div> */}
 
         {/* Sub heading */}
         <motion.p
