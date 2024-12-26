@@ -23,9 +23,9 @@ const DrawerNavbar = ({ openRightSidebar }) => {
       class: "about_me",
     },
     {
-      name: "/blog",
-      title: "BLOG",
-      class: "blog",
+      name: "/contact",
+      title: "CONTACT",
+      class: "contact",
     },
   ];
   return (
