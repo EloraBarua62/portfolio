@@ -170,7 +170,7 @@ export const myProjects = [
       "Express",
       "MySQL",
       "JWT",
-      "Socket.io",
+      "Socket",
     ],
     live_site: "",
     client_site: "https://github.com/EloraBarua62/Apparel-clientside.git",

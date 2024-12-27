@@ -28,8 +28,163 @@ const MyProjects = () => {
             </div>
             <div className={styles.single_column_ruler}></div>
           </div>
-          {/* Project Image and Details in single and multiple column */}
-          <div className={styles.project_info_section}>
+
+          
+          {/* Project Image and Details in single column for small device*/}
+          <div className={styles.project_info_section_small}>
+              <div className="project_image_display_small">
+                <Image
+                  src={each.webimage}
+                  alt=""
+                  className={`image_setup ${each.class}`}
+                  sizes="100%"
+                  priority={true}
+                ></Image>
+              </div>
+              <div className={styles.project_info}>
+                <div className={styles.title}>{each.title}</div>
+                <div className={styles.details}>{each.short_details}</div>
+
+                {/* <div className={styles.tech}>Technology</div> */}
+                <div className={styles.technology_details}>
+                  {each.technology.map((tech, i) => (
+                    <div key={i} className={styles.each_tech_section}>
+                      {tech === "Tailwind" && (
+                        <>
+                          <SiTailwindcss className={styles.tailwind} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "SCSS" && (
+                        <>
+                          <FaSass className={styles.scss} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "MaterialUI" && (
+                        <>
+                          <Image
+                            src={materialui}
+                            alt=""
+                            className={styles.material}
+                          />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "React" && (
+                        <>
+                          <TbBrandReactNative className={styles.react} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "Redux" && (
+                        <>
+                          <TbBrandRedux className={styles.redux} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "Next.js" && (
+                        <>
+                          <TbBrandNextjs className={styles.next} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "Node.js" && (
+                        <>
+                          <FaNode className={styles.node} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "Express" && (
+                        <>
+                          <SiExpress className={styles.express} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "MySQL" && (
+                        <>
+                          <SiMysql className={styles.mysql} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "JWT" && (
+                        <>
+                          <SiJsonwebtokens className={styles.jwt} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "Socket" && (
+                        <>
+                          <TbBrandSocketIo className={styles.socket} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "MongoDB" && (
+                        <>
+                          <SiMongodb className={styles.mongodb} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "Firebase" && (
+                        <>
+                          <RiFirebaseLine className={styles.firebase} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                      {tech === "Stripe" && (
+                        <>
+                          <FaStripe className={styles.stripe} />
+                          <div className={styles.tech_name}>{tech}</div>
+                        </>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <div className={styles.link_section}>
+                  Link :
+                  {each.live_site.length > 0 ? (
+                    <Link
+                      className={styles.link_decoration}
+                      href={each.live_site}
+                    >
+                      Live<FaLink />
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                  {each.client_site.length > 0 ? (
+                    <Link
+                      className={styles.link_decoration}
+                      href={each.client_site}
+                    >
+                      Client<BsGithub />
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                  {each.server_site.length > 0 ? (
+                    <Link
+                      className={styles.link_decoration}
+                      href={each.server_site}
+                    >
+                      Server<BsGithub />
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                  {each.video.length > 0 ? (
+                    <Link className={styles.link_decoration} href={each.video}>
+                      Video<LuVideo />
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+          </div>
+
+          {/* Project Image and Details in multiple column for large device*/}
+          <div className={styles.project_info_section_large}>
             {index === 1 ? (
               // Column 1: Info,
               <div className={styles.project_info}>
@@ -41,17 +196,13 @@ const MyProjects = () => {
                     <div key={i} className={styles.each_tech_section}>
                       {tech === "Tailwind" && (
                         <>
-                          <SiTailwindcss
-                            style={{ fontSize: "25px", color: "#0ef" }}
-                          />
+                          <SiTailwindcss className={styles.tailwind} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "SCSS" && (
                         <>
-                          <FaSass
-                            style={{ fontSize: "30px", color: "#ff80ce" }}
-                          />
+                          <FaSass className={styles.scss} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
@@ -60,104 +211,74 @@ const MyProjects = () => {
                           <Image
                             src={materialui}
                             alt=""
-                            style={{ width: "30px", height: "30px" }}
+                            className={styles.material}
                           />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "React" && (
                         <>
-                          <TbBrandReactNative
-                            style={{ fontSize: "25px", color: "#86e8fc" }}
-                          />
+                          <TbBrandReactNative className={styles.react} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Redux" && (
                         <>
-                          <TbBrandRedux
-                            style={{ fontSize: "25px", color: "#cd52fa" }}
-                          />
+                          <TbBrandRedux className={styles.redux} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Next.js" && (
                         <>
-                          <TbBrandNextjs
-                            style={{ fontSize: "30px", color: "white" }}
-                          />
+                          <TbBrandNextjs className={styles.next} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Node.js" && (
                         <>
-                          <FaNode
-                            style={{ fontSize: "40px", color: "#90f542" }}
-                          />
+                          <FaNode className={styles.node} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Express" && (
                         <>
-                          <SiExpress
-                            style={{
-                              fontSize: "28px",
-                              fontWeight: "bolder",
-                              color: "#f8fc03",
-                            }}
-                          />
+                          <SiExpress className={styles.express} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "MySQL" && (
                         <>
-                          <SiMysql
-                            style={{
-                              fontSize: "40px",
-                              fontWeight: "bolder",
-                              color: "#fca12b",
-                            }}
-                          />
+                          <SiMysql className={styles.mysql} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "JWT" && (
                         <>
-                          <SiJsonwebtokens
-                            style={{ fontSize: "25px", color: "#fa3e67" }}
-                          />
+                          <SiJsonwebtokens className={styles.jwt} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
-                      {tech === "Socket.io" && (
+                      {tech === "Socket" && (
                         <>
-                          <TbBrandSocketIo
-                            style={{ fontSize: "30px", color: "#0ef" }}
-                          />
+                          <TbBrandSocketIo className={styles.socket} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "MongoDB" && (
                         <>
-                          <SiMongodb
-                            style={{ fontSize: "30px", color: "#90f542" }}
-                          />
+                          <SiMongodb className={styles.mongodb} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Firebase" && (
                         <>
-                          <RiFirebaseLine
-                            style={{ fontSize: "30px", color: "#fab83e" }}
-                          />
+                          <RiFirebaseLine className={styles.firebase} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Stripe" && (
                         <>
-                          <FaStripe
-                            style={{ fontSize: "40px", color: "#c186fc" }}
-                          />
+                          <FaStripe className={styles.stripe} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
@@ -165,13 +286,13 @@ const MyProjects = () => {
                   ))}
                 </div>
                 <div className={styles.link_section}>
-                  Link :
+                  Link:
                   {each.live_site && (
                     <Link
                       className={styles.link_decoration}
                       href={each.live_site}
                     >
-                      Live Site <FaLink />
+                      Live<FaLink />
                     </Link>
                   )}
                   {each.client_site && (
@@ -179,7 +300,7 @@ const MyProjects = () => {
                       className={styles.link_decoration}
                       href={each.client_site}
                     >
-                      Client Site <BsGithub style={{ fontSize: "20px" }} />
+                      Client<BsGithub />
                     </Link>
                   )}
                   {each.server_site && (
@@ -187,12 +308,12 @@ const MyProjects = () => {
                       className={styles.link_decoration}
                       href={each.server_site}
                     >
-                      Server Site <BsGithub style={{ fontSize: "20px" }} />
+                      Server<BsGithub />
                     </Link>
                   )}
                   {each.video && (
                     <Link className={styles.link_decoration} href={each.video}>
-                      Video Link <LuVideo style={{ fontSize: "24px" }} />
+                      Video<LuVideo />
                     </Link>
                   )}
                 </div>
@@ -240,17 +361,13 @@ const MyProjects = () => {
                     <div key={i} className={styles.each_tech_section}>
                       {tech === "Tailwind" && (
                         <>
-                          <SiTailwindcss
-                            style={{ fontSize: "25px", color: "#0ef" }}
-                          />
+                          <SiTailwindcss className={styles.tailwind} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "SCSS" && (
                         <>
-                          <FaSass
-                            style={{ fontSize: "30px", color: "#ff80ce" }}
-                          />
+                          <FaSass className={styles.scss} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
@@ -259,104 +376,74 @@ const MyProjects = () => {
                           <Image
                             src={materialui}
                             alt=""
-                            style={{ width: "30px", height: "30px" }}
+                            className={styles.material}
                           />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "React" && (
                         <>
-                          <TbBrandReactNative
-                            style={{ fontSize: "25px", color: "#86e8fc" }}
-                          />
+                          <TbBrandReactNative className={styles.react} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Redux" && (
                         <>
-                          <TbBrandRedux
-                            style={{ fontSize: "25px", color: "#cd52fa" }}
-                          />
+                          <TbBrandRedux className={styles.redux} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Next.js" && (
                         <>
-                          <TbBrandNextjs
-                            style={{ fontSize: "30px", color: "white" }}
-                          />
+                          <TbBrandNextjs className={styles.next} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Node.js" && (
                         <>
-                          <FaNode
-                            style={{ fontSize: "40px", color: "#90f542" }}
-                          />
+                          <FaNode className={styles.node} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Express" && (
                         <>
-                          <SiExpress
-                            style={{
-                              fontSize: "28px",
-                              fontWeight: "bolder",
-                              color: "#f8fc03",
-                            }}
-                          />
+                          <SiExpress className={styles.express} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "MySQL" && (
                         <>
-                          <SiMysql
-                            style={{
-                              fontSize: "40px",
-                              fontWeight: "bolder",
-                              color: "#fca12b",
-                            }}
-                          />
+                          <SiMysql className={styles.mysql} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "JWT" && (
                         <>
-                          <SiJsonwebtokens
-                            style={{ fontSize: "25px", color: "#fa3e67" }}
-                          />
+                          <SiJsonwebtokens className={styles.jwt} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
-                      {tech === "Socket.io" && (
+                      {tech === "Socket" && (
                         <>
-                          <TbBrandSocketIo
-                            style={{ fontSize: "30px", color: "#0ef" }}
-                          />
+                          <TbBrandSocketIo className={styles.socket} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "MongoDB" && (
                         <>
-                          <SiMongodb
-                            style={{ fontSize: "30px", color: "#90f542" }}
-                          />
+                          <SiMongodb className={styles.mongodb} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Firebase" && (
                         <>
-                          <RiFirebaseLine
-                            style={{ fontSize: "30px", color: "#fab83e" }}
-                          />
+                          <RiFirebaseLine className={styles.firebase} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
                       {tech === "Stripe" && (
                         <>
-                          <FaStripe
-                            style={{ fontSize: "40px", color: "#c186fc" }}
-                          />
+                          <FaStripe className={styles.stripe} />
                           <div className={styles.tech_name}>{tech}</div>
                         </>
                       )}
@@ -370,7 +457,7 @@ const MyProjects = () => {
                       className={styles.link_decoration}
                       href={each.live_site}
                     >
-                      Live Site <FaLink />
+                      Live<FaLink />
                     </Link>
                   ) : (
                     ""
@@ -380,7 +467,7 @@ const MyProjects = () => {
                       className={styles.link_decoration}
                       href={each.client_site}
                     >
-                      Client Site <BsGithub style={{ fontSize: "20px" }} />
+                      Client<BsGithub />
                     </Link>
                   ) : (
                     ""
@@ -390,14 +477,14 @@ const MyProjects = () => {
                       className={styles.link_decoration}
                       href={each.server_site}
                     >
-                      Server Site <BsGithub style={{ fontSize: "20px" }} />
+                      Server<BsGithub />
                     </Link>
                   ) : (
                     ""
                   )}
                   {each.video.length > 0 ? (
                     <Link className={styles.link_decoration} href={each.video}>
-                      Video Link <LuVideo style={{ fontSize: "24px" }} />
+                      Video<LuVideo />
                     </Link>
                   ) : (
                     ""
