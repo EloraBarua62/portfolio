@@ -18,6 +18,11 @@ body {
     @media (min-width: 1024px) {
       height: 97vh;
     }
+    
+    @media (min-width: 1600px) {
+    width: 1400px;
+    margin: 0 auto;
+    }
 
     .sidebar_section {
         width: 300px;
@@ -111,25 +116,23 @@ body {
         padding: 0 20px 20px;
         background: #31313130;
 
+        @media (min-width: 1024px) {
+        padding: 0 40px 40px;
+        }
 
         // Projects Display: hover auto scroll effect
         .project_image_display {
-          width: 300px;
+          width: 260px;
           height: 200px;
           overflow: hidden;
           position: relative;
-          margin: 0 auto 10px;
-          // margin-bottom: 10px;
           border-radius: 5px;
           box-shadow: 0 10px 25px rgba(252, 251, 251, 0.068);
 
-          // box-shadow: 0px 10px 10px 2px rgba(254, 254, 254, 0.141),
-          //   0 8px 10px -6px rgba(252, 252, 252, 0.737);
-
-          @media screen and (min-width: 480px) {
+          @media (min-width: 480px) {
             margin-bottom: 20px;
           }
-          @media screen and (min-width: 768px) {
+          @media (min-width: 768px) {
             width: 400px;
             height: 250px;
           }
@@ -168,6 +171,13 @@ body {
               transform: translateY(-90%);
             }
           }
+        }
+
+        .project_image_display:nth-child(1) .project_image_display:nth-child(3){
+          margin-right: auto;
+        }
+        .project_image_display:nth-child(2){
+          margin-left: auto;
         }
       }
     }
