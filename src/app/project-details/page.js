@@ -55,7 +55,7 @@ const ProjectDetails = () => {
               src={item.slide1}
               alt=""
               sizes="100%"
-            priority={true}
+              priority={true}
               className={styles.slider_image_design}
             />
           </div>
@@ -64,7 +64,7 @@ const ProjectDetails = () => {
               src={item.slide2}
               alt=""
               sizes="100%"
-            priority={true}
+              priority={true}
               className={styles.slider_image_design}
             />
           </div>
@@ -73,7 +73,7 @@ const ProjectDetails = () => {
               src={item.slide3}
               alt=""
               sizes="100%"
-            priority={true}
+              priority={true}
               className={styles.slider_image_design}
             />
           </div>
@@ -97,15 +97,13 @@ const ProjectDetails = () => {
                 <div key={i} className={styles.each_tech_section}>
                   {tech === "Tailwind" && (
                     <>
-                      <SiTailwindcss
-                        style={{ fontSize: "25px", color: "#0ef" }}
-                      />
+                      <SiTailwindcss className={styles.tailwind} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "SCSS" && (
                     <>
-                      <FaSass style={{ fontSize: "30px", color: "#ff80ce" }} />
+                      <FaSass className={styles.scss} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
@@ -114,102 +112,74 @@ const ProjectDetails = () => {
                       <Image
                         src={materialui}
                         alt=""
-                        style={{ width: "30px", height: "30px" }}
+                        className={styles.material}
                       />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "React" && (
                     <>
-                      <TbBrandReactNative
-                        style={{ fontSize: "25px", color: "#86e8fc" }}
-                      />
+                      <TbBrandReactNative className={styles.react} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "Redux" && (
                     <>
-                      <TbBrandRedux
-                        style={{ fontSize: "25px", color: "#cd52fa" }}
-                      />
+                      <TbBrandRedux className={styles.redux} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "Next.js" && (
                     <>
-                      <TbBrandNextjs
-                        style={{ fontSize: "30px", color: "white" }}
-                      />
+                      <TbBrandNextjs className={styles.next} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "Node.js" && (
                     <>
-                      <FaNode style={{ fontSize: "40px", color: "#90f542" }} />
+                      <FaNode className={styles.node} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "Express" && (
                     <>
-                      <SiExpress
-                        style={{
-                          fontSize: "28px",
-                          fontWeight: "bolder",
-                          color: "#f8fc03",
-                        }}
-                      />
+                      <SiExpress className={styles.express} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "MySQL" && (
                     <>
-                      <SiMysql
-                        style={{
-                          fontSize: "40px",
-                          fontWeight: "bolder",
-                          color: "#fca12b",
-                        }}
-                      />
+                      <SiMysql className={styles.mysql} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "JWT" && (
                     <>
-                      <SiJsonwebtokens
-                        style={{ fontSize: "25px", color: "#fa3e67" }}
-                      />
+                      <SiJsonwebtokens className={styles.jwt} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
-                  {tech === "Socket.io" && (
+                  {tech === "Socket" && (
                     <>
-                      <TbBrandSocketIo
-                        style={{ fontSize: "30px", color: "#0ef" }}
-                      />
+                      <TbBrandSocketIo className={styles.socket} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "MongoDB" && (
                     <>
-                      <SiMongodb
-                        style={{ fontSize: "30px", color: "#90f542" }}
-                      />
+                      <SiMongodb className={styles.mongodb} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "Firebase" && (
                     <>
-                      <RiFirebaseLine
-                        style={{ fontSize: "30px", color: "#fab83e" }}
-                      />
+                      <RiFirebaseLine className={styles.firebase} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
                   {tech === "Stripe" && (
                     <>
-                      <FaStripe
-                        style={{ fontSize: "40px", color: "#c186fc" }}
-                      />
+                      <FaStripe className={styles.stripe} />
                       <div className={styles.tech_name}>{tech}</div>
                     </>
                   )}
@@ -219,31 +189,31 @@ const ProjectDetails = () => {
           </div>
           <div className={styles.other_details}>
             <div className={styles.each_details}>
-              <div>Type : </div>
+              <div>Type: </div>
               <div className={styles.answer}>{item.type}</div>
             </div>
             <div className={styles.each_details}>
-              <div>Work : </div>
+              <div>Work: </div>
               <div className={styles.answer}>{item.work}</div>
             </div>
             <div className={styles.each_details}>
-              <div>User :</div>
+              <div>User:</div>
               <div className={styles.answer}>{item.user}</div>
             </div>
             <div className={styles.each_details}>
-              <div>Duration :</div>
+              <div>Duration:</div>
               <div className={styles.answer}>{item.duration}</div>
             </div>
             <div className={styles.each_details}>
-              <div>Start Date :</div>
+              <div>Start Date:</div>
               <div className={styles.answer}>{item.start_date}</div>
             </div>
             <div className={styles.each_details}>
-              <div>End Date :</div>
+              <div>End Date:</div>
               <div className={styles.answer}>{item.end_date}</div>
             </div>
             <div className={styles.each_details}>
-              <div>Status :</div>
+              <div>Status:</div>
               <div className={styles.answer}>{item.status}</div>
             </div>
           </div>
