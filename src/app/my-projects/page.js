@@ -75,7 +75,7 @@ const handleCloseModal = () => {
               <FaExpand
                 style={{
                   color: "white",
-                  fontSize: "20px",
+                  fontSize: "16px",
                   fontWeight: "bold",
                 }}
               />

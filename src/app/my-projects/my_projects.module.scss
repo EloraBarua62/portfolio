@@ -27,7 +27,7 @@
   .project_section {
     width: 100%;
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: 1fr;
     gap: 20px;
 
     @media (min-width: 768px) {
@@ -50,11 +50,12 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         border: 0;
         border-radius: 50%;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.39);
+        backdrop-filter: blur(10px);
         display: flex;
         justify-content: center;
         align-items: center;
