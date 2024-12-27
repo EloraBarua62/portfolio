@@ -14,7 +14,7 @@ const PreviousSkill = ({ myskill, side }) => {
 
   return (
     <div className={styles.prev_skill_section}>
-      <div className={styles.heading}>Previous learning</div>
+      <div className={styles.heading}>{side === 'left'? 'Previous Experience': 'New Learning'}</div>
       <div className={styles.display_projects}>
         {myskill.map((skill, idx) => (
           <div
@@ -29,7 +29,7 @@ const PreviousSkill = ({ myskill, side }) => {
               <p className={styles.short_details}>{skill.short_description}</p>
             </div>
             <div className={styles.popup_design}>
-              <h4 style={{ color: "teal" }}>{addProperty.language}</h4>
+              <h4>{addProperty.language}</h4>
               <p className={styles.popup_language}>{addProperty.learning}</p>
             </div>
             {/* {addProperty &&

@@ -1,10 +1,17 @@
 .prev_skill_section {
   border: 2px white;
+  margin-top: 50px;
+
+  @media (min-width: 834px) {
+    margin-top: 80px;
+  }
 
   .heading {
     font-size: 20px;
     font-weight: 600;
     color: white;
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 
     @media (min-width: 768px) {
@@ -19,22 +26,26 @@
   .display_projects {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+
+    @media (min-width: 834px) {
+      gap: 40px;
+    }
 
     // Parent skill container
     .parent_skill_design {
       position: relative;
-      width: 260px;
+      width: auto;
       min-height: 200px;
       padding: 20px;
       overflow: hidden;
 
+      @media (min-width: 480px) {
+        width: 300px;
+      }
       @media (min-width: 834px) {
         width: 300px;
       }
-      // @media (min-width: 1024px) {
-      //   margin-top: 100px;
-      // }
       @media (min-width: 1300px) {
         width: 360px;
         // margin: 100px auto 0px;
@@ -60,14 +71,18 @@
         position: absolute;
         top: 0;
         right: -20px;
-        width: 300px;
+        width: auto;
         height: 100%;
-        background-color: white;
-        color: black;
+        backdrop-filter: blur(30px);
+        color: white;
         opacity: 0;
         transition: 0.8s;
         z-index: 4;
-        padding: 20px;
+        padding: 20px 20px 0 40px;
+
+        h4{
+          color: #0ef;
+        }
       }
       &:hover {
         .popup_design {
@@ -78,33 +93,4 @@
     }
   }
 
-  // @for $i from 1 through 3 {
-  //   .parent_skill_design:nth-child(3n + #{$i}) {
-  //     position: relative;
-
-  //     .skill_design {
-  //       background-color: var(--black5);
-  //       min-width: 300px;
-  //       min-height: 300px;
-  //       .title {
-  //         color: white;
-  //       }
-  //       .short_details {
-  //         color: wheat;
-  //       }
-  //     }
-
-  //     &:hover {
-  //       .popup_design {
-  //         position: absolute;
-  //         top: 0;
-  //         right: 0;
-  //         min-width: 300px;
-  //         background-color: azure;
-  //         // transform: translateY(-10px); // Smooth animation start point
-  //         // transition: opacity 0.3s ease, transform 0.3s ease;
-  //       }
-  //     }
-  //   }
-  // }
 }
