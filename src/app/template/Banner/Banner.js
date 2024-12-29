@@ -14,18 +14,6 @@ const charVariants = {
   reveal: { opacity: 1 },
 };
 
-// const arrow = {
-//   initial: { scale: 1 },
-//   animate: { scale: 1.5 },
-// };
-
-// const item = {
-//   hidden: { opacity: 0 ,scale: 0.2 },
-//   reveal: {
-//     opacity: 1,
-//     scale: 0.8
-//   },
-// };
 const Banner = () => {
   const headingChars = splitString(heading);
   const textChars = splitString(text);

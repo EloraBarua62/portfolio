@@ -1,0 +1,250 @@
+.navbar_common {
+  background-color: var(--black2);
+  font-size: 14px;
+  display: none;
+  overflow-x: hidden;
+}
+@media (min-width: 1024px) {
+  .navbar_common {
+    display: block;
+  }
+  .navbar_common .header_section {
+    width: 100%;
+    height: 60px;
+    background-color: var(--black3);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar_common .header_section .toggle_button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 23px;
+  }
+  .navbar_common .header_section .toggle_button span {
+    width: 20px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.637);
+    transition: 0.5s;
+  }
+  .navbar_common .header_section .toggle_button:hover span {
+    background-color: white;
+  }
+  .navbar_common .navigation_section_small {
+    width: 100%;
+    height: 100px;
+    opacity: 1;
+    position: relative;
+  }
+  .navbar_common .navigation_section_small .routing_page {
+    position: absolute;
+    top: 60px;
+    color: rgba(255, 255, 255, 0.637);
+    transform: rotate(90deg);
+    transition: 0.5s;
+    cursor: pointer;
+    width: 80px;
+  }
+  .navbar_common .navigation_section_small .routing_page:hover {
+    color: white;
+  }
+  .navbar_common .navigation_section_large {
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .navbar_common .navigation_section_large .routes:nth-child(4n+1) {
+    text-decoration: none;
+    position: absolute;
+    top: 40px;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.637);
+    animation: smoothmoveright 0.5s;
+  }
+  @keyframes smoothmoveright {
+    from {
+      left: 20px;
+    }
+    to {
+      left: 40px;
+    }
+  }
+  .navbar_common .navigation_section_large .routes:nth-child(4n+2) {
+    text-decoration: none;
+    position: absolute;
+    top: 80px;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.637);
+    animation: smoothmoveright 1s;
+  }
+  @keyframes smoothmoveright {
+    from {
+      left: 20px;
+    }
+    to {
+      left: 40px;
+    }
+  }
+  .navbar_common .navigation_section_large .routes:nth-child(4n+3) {
+    text-decoration: none;
+    position: absolute;
+    top: 120px;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.637);
+    animation: smoothmoveright 1.5s;
+  }
+  @keyframes smoothmoveright {
+    from {
+      left: 20px;
+    }
+    to {
+      left: 40px;
+    }
+  }
+  .navbar_common .navigation_section_large .routes:nth-child(4n+4) {
+    text-decoration: none;
+    position: absolute;
+    top: 160px;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.637);
+    animation: smoothmoveright 2s;
+  }
+  @keyframes smoothmoveright {
+    from {
+      left: 20px;
+    }
+    to {
+      left: 40px;
+    }
+  }
+}
+
+.navbar_small {
+  width: 80px;
+  transition: 0.5s;
+}
+.navbar_small .toggle_button {
+  left: 30px;
+}
+.navbar_small .toggle_button .top_line {
+  position: absolute;
+  top: 0;
+}
+.navbar_small .toggle_button .middle_line {
+  position: absolute;
+  top: 6px;
+}
+.navbar_small .toggle_button .bottom_line {
+  position: absolute;
+  top: 12px;
+}
+
+.navbar_large {
+  width: 200px;
+  transition: 0.5s;
+}
+.navbar_large .toggle_button {
+  left: 20px;
+}
+.navbar_large .toggle_button .top_line {
+  position: absolute;
+  top: 0;
+  transform: rotate(-45deg);
+}
+.navbar_large .toggle_button .bottom_line {
+  position: absolute;
+  top: 0;
+  transform: rotate(45deg);
+}
+.navbar_large .toggle_button .middle_line {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.navbar_large .navigation_section_small {
+  opacity: 0;
+}
+.navbar_large .navigation_section_large {
+  opacity: 1;
+}
+.navbar_large .navigation_section_large .routes:nth-child(4n+1) {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+  cursor: pointer;
+  animation: smoothmoveleft 0.5s;
+}
+.navbar_large .navigation_section_large .routes:nth-child(4n+1):hover {
+  color: white;
+}
+@keyframes smoothmoveleft {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 20px;
+  }
+}
+.navbar_large .navigation_section_large .routes:nth-child(4n+2) {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+  cursor: pointer;
+  animation: smoothmoveleft 1s;
+}
+.navbar_large .navigation_section_large .routes:nth-child(4n+2):hover {
+  color: white;
+}
+@keyframes smoothmoveleft {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 20px;
+  }
+}
+.navbar_large .navigation_section_large .routes:nth-child(4n+3) {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+  cursor: pointer;
+  animation: smoothmoveleft 1.5s;
+}
+.navbar_large .navigation_section_large .routes:nth-child(4n+3):hover {
+  color: white;
+}
+@keyframes smoothmoveleft {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 20px;
+  }
+}
+.navbar_large .navigation_section_large .routes:nth-child(4n+4) {
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+  cursor: pointer;
+  animation: smoothmoveleft 2s;
+}
+.navbar_large .navigation_section_large .routes:nth-child(4n+4):hover {
+  color: white;
+}
+@keyframes smoothmoveleft {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 20px;
+  }
+}/*# sourceMappingURL=Navbar.module.css.map */

@@ -1,0 +1,165 @@
+.navbar_common {
+  width: 200px;
+  height: calc(100vh - 60px);
+  background-color: var(--black2);
+  font-size: 14px;
+  position: fixed;
+  right: -250px;
+  transition: 0.9s;
+  display: block;
+}
+@media (min-width: 1024px) {
+  .navbar_common {
+    display: none;
+  }
+}
+.navbar_common.open {
+  right: 0;
+}
+.navbar_common.open .routes:nth-child(4n+1) {
+  text-decoration: none;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+  cursor: pointer;
+  animation: smoothmoveleft 0.5s;
+}
+.navbar_common.open .routes:nth-child(4n+1):hover {
+  color: white;
+}
+@keyframes smoothmoveleft {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 20px;
+  }
+}
+.navbar_common.open .routes:nth-child(4n+2) {
+  text-decoration: none;
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+  cursor: pointer;
+  animation: smoothmoveleft 1s;
+}
+.navbar_common.open .routes:nth-child(4n+2):hover {
+  color: white;
+}
+@keyframes smoothmoveleft {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 20px;
+  }
+}
+.navbar_common.open .routes:nth-child(4n+3) {
+  text-decoration: none;
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+  cursor: pointer;
+  animation: smoothmoveleft 1.5s;
+}
+.navbar_common.open .routes:nth-child(4n+3):hover {
+  color: white;
+}
+@keyframes smoothmoveleft {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 20px;
+  }
+}
+.navbar_common.open .routes:nth-child(4n+4) {
+  text-decoration: none;
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+  cursor: pointer;
+  animation: smoothmoveleft 2s;
+}
+.navbar_common.open .routes:nth-child(4n+4):hover {
+  color: white;
+}
+@keyframes smoothmoveleft {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 20px;
+  }
+}
+.navbar_common.close {
+  right: -250px;
+}
+.navbar_common.close .routes:nth-child(4n+1) {
+  text-decoration: none;
+  position: absolute;
+  top: 40px;
+  color: rgba(255, 255, 255, 0.637);
+  animation: smoothmoveright 0.9s;
+}
+@keyframes smoothmoveright {
+  from {
+    left: 20px;
+  }
+  to {
+    left: 40px;
+  }
+}
+.navbar_common.close .routes:nth-child(4n+2) {
+  text-decoration: none;
+  position: absolute;
+  top: 80px;
+  color: rgba(255, 255, 255, 0.637);
+  animation: smoothmoveright 1.8s;
+}
+@keyframes smoothmoveright {
+  from {
+    left: 20px;
+  }
+  to {
+    left: 40px;
+  }
+}
+.navbar_common.close .routes:nth-child(4n+3) {
+  text-decoration: none;
+  position: absolute;
+  top: 120px;
+  color: rgba(255, 255, 255, 0.637);
+  animation: smoothmoveright 2.7s;
+}
+@keyframes smoothmoveright {
+  from {
+    left: 20px;
+  }
+  to {
+    left: 40px;
+  }
+}
+.navbar_common.close .routes:nth-child(4n+4) {
+  text-decoration: none;
+  position: absolute;
+  top: 160px;
+  color: rgba(255, 255, 255, 0.637);
+  animation: smoothmoveright 3.6s;
+}
+@keyframes smoothmoveright {
+  from {
+    left: 20px;
+  }
+  to {
+    left: 40px;
+  }
+}/*# sourceMappingURL=DrawerNavbar.module.css.map */

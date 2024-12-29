@@ -1,0 +1,25 @@
+.skillset_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 834px) {
+  .skillset_section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .skillset_section {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 1300px) {
+  .skillset_section {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px auto 0px;
+  }
+}/*# sourceMappingURL=SkillsSet.module.css.map */

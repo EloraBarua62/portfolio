@@ -45,7 +45,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/elora-barua-684157206/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: 'white'}}
+                  style={{ color: "white" }}
                 >
                   {info.property_value2}
                 </Link>
@@ -97,6 +97,9 @@ const Contact = () => {
             <MdOutlineMailOutline />
           </div>
           <textarea type="text" onSelect={() => setSelectField("message")} />
+        </div>
+        <div className={styles.button_section}>
+          <button className={styles.button_design}>Explore My World</button>
         </div>
       </form>
     </div>

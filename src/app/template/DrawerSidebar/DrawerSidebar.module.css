@@ -1,0 +1,255 @@
+.sidebar_section {
+  height: calc(100vh - 60px);
+  background-color: var(--black2);
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  left: -100%;
+  transition: left 0.5s ease-in-out;
+  overflow: hidden;
+  display: block;
+}
+.sidebar_section.open {
+  left: 0;
+}
+.sidebar_section.close {
+  left: -100%;
+}
+.sidebar_section .profile_section {
+  width: 300px;
+  background-color: var(--black3);
+  padding: 20px 0;
+  position: relative;
+  top: 0;
+}
+.sidebar_section .profile_section .profile_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar_section .profile_section .profile_container .picture_setup_container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 50%;
+}
+.sidebar_section .profile_section .profile_container .picture_setup_container .picture_design {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sidebar_section .profile_section h3 {
+  text-align: center;
+  margin: 10px 0 2px;
+}
+.sidebar_section .profile_section p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.637);
+  font-weight: 300;
+  margin: 0;
+  font-size: 14px;
+}
+.sidebar_section .general_info_scrol_section {
+  width: 100%;
+  height: calc(100% - 241px);
+  overflow-y: auto;
+  scrollbar-color: #0ef transparent;
+  scrollbar-width: thin;
+}
+.sidebar_section .general_info_scrol_section .bio_data_section {
+  margin: 20px 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.223);
+}
+.sidebar_section .general_info_scrol_section .bio_data_section .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.sidebar_section .general_info_scrol_section .bio_data_section .details .value {
+  color: rgba(255, 255, 255, 0.637);
+}
+.sidebar_section .general_info_scrol_section .lang_section {
+  margin: 20px 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.223);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.sidebar_section .general_info_scrol_section .lang_section .value {
+  position: absolute;
+  top: 22px;
+  margin-left: 18px;
+  font-size: 12px;
+  animation: showPercentage 0.5s 1s linear forwards;
+  opacity: 0;
+}
+@keyframes showPercentage {
+  100% {
+    opacity: 1;
+  }
+}
+.sidebar_section .general_info_scrol_section .lang_section svg {
+  width: 60px;
+  height: 60px;
+  transform: rotate(-90deg);
+}
+.sidebar_section .general_info_scrol_section .lang_section svg .progress_cycle {
+  stroke-width: 10;
+  stroke: var(--black4);
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+.sidebar_section .general_info_scrol_section .lang_section svg .path {
+  stroke-width: 10;
+  stroke: #0ef;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+.sidebar_section .general_info_scrol_section .lang_section .title {
+  text-align: center;
+}
+.sidebar_section .general_info_scrol_section .programming_lang_section {
+  margin: 20px 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.223);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar_section .general_info_scrol_section .programming_lang_section .each_lang_section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sidebar_section .general_info_scrol_section .programming_lang_section .each_lang_section .progress_line {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  border-radius: 10px;
+  background-color: var(--black4);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.sidebar_section .general_info_scrol_section .programming_lang_section .each_lang_section .progress_line span {
+  height: 5px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #0ef;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.sidebar_section .general_info_scrol_section .programming_lang_section .each_lang_section .progress_line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+.sidebar_section .general_info_scrol_section .programming_lang_section .each_lang_section .progress_line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -25px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.sidebar_section .general_info_scrol_section .other_special_section {
+  margin: 20px 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.223);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sidebar_section .general_info_scrol_section .other_special_section .special_property {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.sidebar_section .general_info_scrol_section .other_special_section .special_property .icon_design {
+  color: #0ef;
+  font-size: 20px;
+}
+.sidebar_section .general_info_scrol_section .resume_download {
+  margin: 20px;
+}
+.sidebar_section .general_info_scrol_section .resume_download .button_design {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: 0;
+  font-size: 16px;
+  color: white;
+  transition: 0.5s;
+}
+.sidebar_section .general_info_scrol_section .resume_download .button_design:hover {
+  color: rgba(255, 255, 255, 0.637);
+  cursor: pointer;
+}
+.sidebar_section .footer_section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black3);
+  position: absolute;
+  bottom: 0;
+}
+.sidebar_section .footer_section .icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  padding: 11px 20px;
+  color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+}
+.sidebar_section .footer_section .icon h4 {
+  margin: 0;
+  font-weight: 300;
+}
+.sidebar_section .footer_section .icon:hover {
+  color: white;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .sidebar_section {
+    display: none;
+  }
+}/*# sourceMappingURL=DrawerSidebar.module.css.map */

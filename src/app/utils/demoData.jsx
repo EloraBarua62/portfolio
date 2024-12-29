@@ -199,9 +199,9 @@ export const myProjects = [
     key_features: [
       "Order products",
       "Manage customers & products",
-      "Add Seller"
+      "Add Seller",
     ],
-      technology: [
+    technology: [
       "Tailwind",
       "React",
       "Node.js",
@@ -240,7 +240,7 @@ export const myProjects = [
       "View note details",
       "Update & delete note",
     ],
-      technology: ["Tailwind", "Redux", "Node.js", "Firebase", "MongoDB"],
+    technology: ["Tailwind", "Redux", "Node.js", "Firebase", "MongoDB"],
     live_site: "https://notefriend-5a4c3.web.app/",
     client_site:
       "https://github.com/EloraBarua62/Note_Taking_Appile-client-side",
@@ -271,7 +271,7 @@ export const myProjects = [
       "Entry new books",
       "Enlist suppliers details",
     ],
-      technology: ["React.js", " Node.js", " MongoDB", " Firebase"],
+    technology: ["React.js", " Node.js", " MongoDB", " Firebase"],
     live_site: "https://bookpile-66c24.web.app/",
     client_site: "https://github.com/EloraBarua62/BookPile-client-side",
     server_site: "https://github.com/EloraBarua62/BookPile-server-side",
@@ -289,15 +289,15 @@ export const myProjects = [
     title: "Interior Design",
     class: "interior",
     webimage: interior,
+    slide1: bookpile_slide1,
+    slide2: bookpile_slide2,
+    slide3: bookpile_slide3,
     short_details:
       "A website of interior design where company offer Architecture, Interior design, Home Decore in various price. User can demand for personal preference.",
     details:
       "A website of interior design where company offer Architecture, Interior design, Home Decore in various price. Project's video reference and sample of successful works. User can demand for personal preference and communicate with our experts conveniently",
-    key_features: [
-      "Check works",
-      "Communicate & order",
-    ],
-      technology: ["Next.js", "Tailwind"],
+    key_features: ["Check works", "Communicate & order"],
+    technology: ["Next.js", "Tailwind"],
     live_site: "https://dhruva-parisad-clientside.vercel.app/user",
     client_site:
       "https://www.loom.com/share/f5b131dae8cc49eabb7b6886141c9aa6?sid=9e8cf0ad-7184-4cd6-869b-5cf92d7a8fc3",
@@ -316,15 +316,18 @@ export const myProjects = [
     title: "Foodie",
     class: "dhruva",
     webimage: dhurva,
+    slide1: bookpile_slide1,
+    slide2: bookpile_slide2,
+    slide3: bookpile_slide3,
     short_details: "",
     details:
       "A project of ‘The Board of Cultural Institute - Dhruva Parishad’ on exam management systems where students of different cultural schools register for examinations under four districts, choose multiple courses according to their preferences, download auto generated admit-cards and get results with auto generated certificates on the result publication date. School Principals send requests to admin to enlist their school information; observe the result of his/her school. Besides, the admin updates exam results, grants new requested schools to enlist them, updates news. Admin will update the exam date and result publication date; students can only access the result portal after publication.",
     key_features: [
       "Check food menu, review",
       "Place order",
-      "Manage food items"
+      "Manage food items",
     ],
-      technology: ["Next.js", "MaterialUI"],
+    technology: ["Next.js", "MaterialUI"],
     live_site: "https://dhruva-parisad-clientside.vercel.app/user",
     client_site:
       "https://www.loom.com/share/f5b131dae8cc49eabb7b6886141c9aa6?sid=9e8cf0ad-7184-4cd6-869b-5cf92d7a8fc3",

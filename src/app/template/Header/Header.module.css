@@ -1,0 +1,79 @@
+.header_design {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--black3);
+}
+@media (min-width: 1024px) {
+  .header_design {
+    display: none;
+  }
+}
+.header_design .left_toggle_button {
+  cursor: pointer;
+}
+.header_design .left_toggle_button .icon_design {
+  width: 3px;
+  height: 3px;
+  margin: 5px 0;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.637);
+}
+.header_design .left_toggle_button:hover .icon_design {
+  background-color: white;
+}
+.header_design .right_toggle_button {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_design .right_toggle_button .toggle_button {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.header_design .right_toggle_button .toggle_button span {
+  width: 20px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.637);
+  transition: 0.5s;
+}
+.header_design .right_toggle_button .toggle_button:hover span {
+  background-color: white;
+}
+.header_design .cross_toggle {
+  transition: 0.5s;
+}
+.header_design .cross_toggle .toggle_button .top_line {
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.header_design .cross_toggle .toggle_button .bottom_line {
+  position: absolute;
+  transform: rotate(45deg);
+}
+.header_design .cross_toggle .toggle_button .middle_line {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.header_design .hamburger {
+  transition: 0.5s;
+}
+.header_design .hamburger .toggle_button .top_line {
+  position: absolute;
+  top: 0;
+}
+.header_design .hamburger .toggle_button .middle_line {
+  position: absolute;
+  top: 6px;
+}
+.header_design .hamburger .toggle_button .bottom_line {
+  position: absolute;
+  top: 12px;
+}/*# sourceMappingURL=Header.module.css.map */

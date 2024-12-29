@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { myProjects } from "../utils/demoData";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import Image from "next/image";
 import styles from "./project_details.module.scss";
 import "slick-carousel/slick/slick.css";
@@ -25,12 +25,12 @@ import { RiFirebaseLine } from "react-icons/ri";
 import { FaSass } from "react-icons/fa6";
 import materialui from "../../../public/files/materialui.png";
 
+// Dynamic rendering configuration
+export const dynamic = "force-dynamic";
 
-
-const ProjectDetails = () => {
+const ProjectDetailsComponent = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
-  const [projectDetails, setProjectDetails] = useState({});
   const item = myProjects.find((data) => data.id == id);
   console.log(item);
 
@@ -222,5 +222,11 @@ const ProjectDetails = () => {
     </div>
   );
 };
+
+const ProjectDetails = () => (
+  <Suspense fallback={<div>Loading project details...</div>}>
+    <ProjectDetailsComponent />
+  </Suspense>
+);
 
 export default ProjectDetails;

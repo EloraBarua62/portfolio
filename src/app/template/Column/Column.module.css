@@ -1,0 +1,48 @@
+.column_design .transition_container {
+  height: 100vh;
+  background-color: rgba(245, 238, 238, 0.557);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.column_design .transition_container .image_section {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column_design .transition_container .image_section .profile_image_setup {
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: rgba(213, 13, 13, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 50%;
+}
+.column_design .transition_container .single_column {
+  position: relative;
+  width: 50%;
+  height: 130%;
+  background-color: black;
+  border: 1;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column_design .transition_container .single_column .my_info {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.column_design .transition_container .single_column .my_info .my_name {
+  font-size: 50px;
+  color: #ff0051;
+}
+.column_design .transition_container .single_column .my_info .my_details {
+  font-size: 32px;
+  color: rgb(239, 236, 236);
+}/*# sourceMappingURL=Column.module.css.map */

@@ -1,0 +1,96 @@
+.prev_skill_section {
+  border: 2px white;
+  margin-top: 50px;
+}
+@media (min-width: 834px) {
+  .prev_skill_section {
+    margin-top: 80px;
+  }
+}
+.prev_skill_section .heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .prev_skill_section .heading {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .prev_skill_section .heading {
+    font-size: 24px;
+  }
+}
+.prev_skill_section .display_projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (min-width: 834px) {
+  .prev_skill_section .display_projects {
+    gap: 40px;
+  }
+}
+.prev_skill_section .display_projects .parent_skill_design {
+  position: relative;
+  width: auto;
+  min-height: 200px;
+  padding: 20px;
+  overflow: hidden;
+}
+@media (min-width: 480px) {
+  .prev_skill_section .display_projects .parent_skill_design {
+    width: 300px;
+  }
+}
+@media (min-width: 834px) {
+  .prev_skill_section .display_projects .parent_skill_design {
+    width: 300px;
+  }
+}
+@media (min-width: 1300px) {
+  .prev_skill_section .display_projects .parent_skill_design {
+    width: 360px;
+  }
+}
+.prev_skill_section .display_projects .parent_skill_design.leftbackgound {
+  background-color: var(--black2);
+}
+.prev_skill_section .display_projects .parent_skill_design.rightbackgound {
+  background-color: var(--black5);
+}
+.prev_skill_section .display_projects .parent_skill_design .skill_design {
+  font-weight: 300;
+}
+.prev_skill_section .display_projects .parent_skill_design .skill_design .title {
+  color: white;
+}
+.prev_skill_section .display_projects .parent_skill_design .skill_design .short_details {
+  color: wheat;
+}
+.prev_skill_section .display_projects .parent_skill_design .popup_design {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: auto;
+  height: 100%;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  color: white;
+  opacity: 0;
+  transition: 0.8s;
+  z-index: 4;
+  padding: 20px 20px 0 40px;
+}
+.prev_skill_section .display_projects .parent_skill_design .popup_design h4 {
+  color: #0ef;
+}
+.prev_skill_section .display_projects .parent_skill_design:hover .popup_design {
+  opacity: 1;
+  transform: translateX(-20px);
+}/*# sourceMappingURL=PreviousSkill.module.css.map */
