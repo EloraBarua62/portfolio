@@ -41,6 +41,8 @@ const Contact = () => {
               <p className={styles.title}>{info.property_title2}</p>
               {info.property_title2 == "LinkedIn : " ? (
                 <Link
+                  passHref={true}
+                  target="_blank"
                   className={styles.value}
                   href="https://www.linkedin.com/in/elora-barua-684157206/"
                   target="_blank"

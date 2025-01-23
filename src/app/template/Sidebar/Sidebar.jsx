@@ -13,8 +13,6 @@ import { TiTick } from "react-icons/ti";
 import { FaDownload } from "react-icons/fa6";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
-
-
 const Sidebar = () => {
   return (
     <div className={styles.sidebar_section}>
@@ -99,8 +97,9 @@ const Sidebar = () => {
         {/* Download cv */}
         <div className={styles.resume_download}>
           <Link
-            href="files/resume.pdf"
+            passHref={true}
             target="_blank"
+            href="files/resume.pdf"
             download
             style={{ textDecoration: "none" }}
           >
@@ -113,16 +112,26 @@ const Sidebar = () => {
 
       {/* Footer section */}
       <div className={styles.footer_section}>
-        <div className={styles.icon}>
+        <Link
+          href="https://www.linkedin.com/in/elora-barua-684157206/"
+          passHref={true}
+          target="_blank"
+          style={{ textDecoration: "none" }}
+          className={styles.icon}
+        >
           <h4>LinkedIn</h4>
           <FaLinkedinIn />
-        </div>
-        <div className={styles.icon}>
-          <h4>
-            Github
-          </h4>
-        <FaGithub />
-      </div>
+        </Link>
+        <Link
+          href="https://github.com/EloraBarua62"
+          passHref={true}
+          target="_blank"
+          style={{ textDecoration: "none" }}
+          className={styles.icon}
+        >
+          <h4>Github</h4>
+          <FaGithub />
+        </Link>
       </div>
     </div>
   );

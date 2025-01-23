@@ -24,18 +24,23 @@ import bookpile_slide1 from "../../../public/bookpile_slider/bookpile_slide1.png
 import bookpile_slide2 from "../../../public/bookpile_slider/bookpile_slide2.png";
 import bookpile_slide3 from "../../../public/bookpile_slider/bookpile_slide3.png";
 
+// slider: Compact
+import solart_slide1 from "../../../public/solart_slider/Sol Art.png";
+import solart_slide2 from "../../../public/solart_slider/Sol Art (1).png";
+import solart_slide3 from "../../../public/solart_slider/Sol Art (2).png";
+
 export const bioDataDetails = [
   {
-    title: "Residence",
-    value: "Bangladesh",
+    title: "Country",
+    value: "Finland",
   },
   {
     title: "City",
-    value: "Chattogram",
+    value: "Vaasa",
   },
   {
     title: "Age",
-    value: "26",
+    value: "27",
   },
 ];
 
@@ -43,7 +48,7 @@ export const languageTypes = [
   {
     step: "english",
     title: "English",
-    value: 70,
+    value: 80,
   },
   {
     step: "bangla",
@@ -53,21 +58,11 @@ export const languageTypes = [
   {
     step: "finnish",
     title: "Finnish",
-    value: 10,
+    value: 5,
   },
 ];
 
 export const proLangTypes = [
-  {
-    step: "html",
-    title: "HTML",
-    value: 70,
-  },
-  {
-    step: "css",
-    title: "CSS",
-    value: 60,
-  },
   {
     step: "js",
     title: "Javascript",
@@ -87,6 +82,16 @@ export const proLangTypes = [
     step: "node",
     title: "Node.js",
     value: 70,
+  },
+  {
+    step: "html",
+    title: "HTML",
+    value: 70,
+  },
+  {
+    step: "css",
+    title: "CSS",
+    value: 60,
   },
 ];
 
@@ -130,8 +135,8 @@ export const myProjects = [
       "MongoDB",
     ],
     live_site: "https://dhruva-parisad-clientside.vercel.app/user",
-    client_site: "",
-    server_site: "",
+    client_site: "https://github.com/EloraBarua62/Dhruva_Parisad_Clientside",
+    server_site: "https://github.com/EloraBarua62/Dhruva_Parisad_Serverside",
     video:
       "https://www.loom.com/share/f5b131dae8cc49eabb7b6886141c9aa6?sid=9e8cf0ad-7184-4cd6-869b-5cf92d7a8fc3",
     duration: "3 Months",
@@ -181,8 +186,8 @@ export const myProjects = [
     work: "UI design, Web Development",
     status: "Running",
     user: "Buyer, Seller, Admin",
-    start_date: "April 1, 2024",
-    end_date: "Expected in July",
+    start_date: "December 1, 2024",
+    end_date: "Expected in February 2025",
   },
   {
     id: 3,
@@ -263,7 +268,7 @@ export const myProjects = [
     slide2: bookpile_slide2,
     slide3: bookpile_slide3,
     short_details:
-      "NoteFriend is a website for storing and managing significant notes. All notes are systematized by date.",
+      "BookPile is a book inventory management website for storing and managing books. Book suppliers can stock new collections.",
     details:
       "BookPile is a book inventory management website where the admin will control the entire system. Inventory management features like add, update and deliver books are included in this site. Book suppliers can stock new collections.",
     key_features: [
@@ -289,18 +294,17 @@ export const myProjects = [
     title: "Interior Design",
     class: "interior",
     webimage: interior,
-    slide1: bookpile_slide1,
-    slide2: bookpile_slide2,
-    slide3: bookpile_slide3,
+    slide1: solart_slide1,
+    slide2: solart_slide2,
+    slide3: solart_slide3,
     short_details:
       "A website of interior design where company offer Architecture, Interior design, Home Decore in various price. User can demand for personal preference.",
     details:
       "A website of interior design where company offer Architecture, Interior design, Home Decore in various price. Project's video reference and sample of successful works. User can demand for personal preference and communicate with our experts conveniently",
     key_features: ["Check works", "Communicate & order"],
     technology: ["Next.js", "Tailwind"],
-    live_site: "https://dhruva-parisad-clientside.vercel.app/user",
-    client_site:
-      "https://www.loom.com/share/f5b131dae8cc49eabb7b6886141c9aa6?sid=9e8cf0ad-7184-4cd6-869b-5cf92d7a8fc3",
+    live_site: "https://solart-portfolio.vercel.app/",
+    client_site: "https://github.com/EloraBarua62/SolArt_portfolio",
     server_site: "",
     video: "",
     duration: "2 Weeks",
@@ -311,36 +315,36 @@ export const myProjects = [
     start_date: "November 5, 2022",
     end_date: "November 22, 2022",
   },
-  {
-    id: 7,
-    title: "Foodie",
-    class: "dhruva",
-    webimage: dhurva,
-    slide1: bookpile_slide1,
-    slide2: bookpile_slide2,
-    slide3: bookpile_slide3,
-    short_details: "",
-    details:
-      "A project of ‘The Board of Cultural Institute - Dhruva Parishad’ on exam management systems where students of different cultural schools register for examinations under four districts, choose multiple courses according to their preferences, download auto generated admit-cards and get results with auto generated certificates on the result publication date. School Principals send requests to admin to enlist their school information; observe the result of his/her school. Besides, the admin updates exam results, grants new requested schools to enlist them, updates news. Admin will update the exam date and result publication date; students can only access the result portal after publication.",
-    key_features: [
-      "Check food menu, review",
-      "Place order",
-      "Manage food items",
-    ],
-    technology: ["Next.js", "MaterialUI"],
-    live_site: "https://dhruva-parisad-clientside.vercel.app/user",
-    client_site:
-      "https://www.loom.com/share/f5b131dae8cc49eabb7b6886141c9aa6?sid=9e8cf0ad-7184-4cd6-869b-5cf92d7a8fc3",
-    server_site: "",
-    video: "",
-    duration: "3 Weeks",
-    type: "Website",
-    work: "Frontend Development",
-    status: "Finish",
-    user: "User",
-    start_date: "December 1, 2022",
-    end_date: "December 24, 2022",
-  },
+  // {
+  //   id: 7,
+  //   title: "Foodie",
+  //   class: "dhruva",
+  //   webimage: dhurva,
+  //   slide1: bookpile_slide1,
+  //   slide2: bookpile_slide2,
+  //   slide3: bookpile_slide3,
+  //   short_details: "",
+  //   details:
+  //     "A project of ‘The Board of Cultural Institute - Dhruva Parishad’ on exam management systems where students of different cultural schools register for examinations under four districts, choose multiple courses according to their preferences, download auto generated admit-cards and get results with auto generated certificates on the result publication date. School Principals send requests to admin to enlist their school information; observe the result of his/her school. Besides, the admin updates exam results, grants new requested schools to enlist them, updates news. Admin will update the exam date and result publication date; students can only access the result portal after publication.",
+  //   key_features: [
+  //     "Check food menu, review",
+  //     "Place order",
+  //     "Manage food items",
+  //   ],
+  //   technology: ["Next.js", "MaterialUI"],
+  //   live_site: "https://dhruva-parisad-clientside.vercel.app/user",
+  //   client_site:
+  //     "https://www.loom.com/share/f5b131dae8cc49eabb7b6886141c9aa6?sid=9e8cf0ad-7184-4cd6-869b-5cf92d7a8fc3",
+  //   server_site: "",
+  //   video: "",
+  //   duration: "3 Weeks",
+  //   type: "Website",
+  //   work: "Frontend Development",
+  //   status: "Finish",
+  //   user: "User",
+  //   start_date: "December 1, 2022",
+  //   end_date: "December 24, 2022",
+  // },
 ];
 
 
@@ -366,13 +370,13 @@ export const myHistory = [
     learning: 'Basic Programming, OOP, Data Structure & Algorithm, Database, Basic Artificial Intelligence, Software Engineering',
     certificate: ''
   },
-  {
-    name: 'Codechemist',
-    title: 'Junior Software Engineer',
-    duration: '2024 - 2026',
-    learning: 'Redux, NextJS, MySQL',
-    certificate: ''
-  },
+  // {
+  //   name: 'Codechemist',
+  //   title: 'Junior Software Engineer',
+  //   duration: '2024 - 2026',
+  //   learning: 'Redux, NextJS, MySQL',
+  //   certificate: ''
+  // },
   {
     name: 'Dhrubo Parishad',
     title: 'Web Developer',

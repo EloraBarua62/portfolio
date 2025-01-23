@@ -14,13 +14,17 @@ const PreviousSkill = ({ myskill, side }) => {
 
   return (
     <div className={styles.prev_skill_section}>
-      <div className={styles.heading}>{side === 'left'? 'Previous Experience': 'New Learning'}</div>
+      <div className={styles.heading}>
+        {side === "left" ? "Previous Experience" : "New Learning"}
+      </div>
       <div className={styles.display_projects}>
         {myskill.map((skill, idx) => (
           <div
-            key={idx}         
+            key={idx}
             // className={`${styles.parent_skill_design} ${styles[`parent_skill_design_${idx}`]}`}
-            className={`${styles.parent_skill_design} ${side == 'left'? styles.leftbackgound : styles.rightbackgound}`}
+            className={`${styles.parent_skill_design} ${
+              side == "left" ? styles.leftbackgound : styles.rightbackgound
+            }`}
             onMouseEnter={() => applySkillDetails(skill)}
             onMouseLeave={removeSkillDetails}
           >
@@ -28,8 +32,9 @@ const PreviousSkill = ({ myskill, side }) => {
               <h4 className={styles.title}>{skill.title}</h4>
               <p className={styles.short_details}>{skill.short_description}</p>
             </div>
-            <div className={styles.popup_design}>
-              <h4>{addProperty.language}</h4>
+            <div className={styles.popup_design}>               
+              <h4 className={styles.language}> {addProperty.language}</h4>               
+              <h4 className={styles.language}>{addProperty.tools}</h4>               
               <p className={styles.popup_language}>{addProperty.learning}</p>
             </div>
             {/* {addProperty &&

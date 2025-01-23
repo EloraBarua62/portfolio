@@ -6,15 +6,16 @@ const SkillsSet = () => {
     {
       title: "Competitive Programming",
       short_description:
-        "This journey started in 2017 when I discover a interesting fact of participating in a compitition. This helps my to think fast and search for optimized solution under pressure.",
-      language: "C++",
-      learning: "Time and space complexity reduction",
+        "This journey started in 2017 when I discover a interesting fact of participating in a compitition. This helps my to think fast and search for optimized solution under pressure. Think about corner cases and edge cases, Read others code for self-improvement",
+      language: "Language: C++",
+      learning:
+        "Time and space complexity reduction, Choose greedy approach, Check all possible cases",
     },
     {
       title: "Web Development",
       short_description:
-        "I actively have started working on web technology focused on Javascript frameworks for full-stack.",
-      language: "Javascript",
+        "I actively have started working on web technology focused on Javascript frameworks for full-stack. I started my web development journey back in 2022 and still learning new things everyday. My main focus is to understand the working process of a web application from server to client and how JavaScript engine works, manipulate data.",
+      language: "Language: Javascript",
       technology: [
         {
           section: "Front End",
@@ -35,30 +36,33 @@ const SkillsSet = () => {
     {
       title: "UI Design",
       short_description: "A preliminary knowledge of create a design",
-      tools: "Figma",
+      tools: "Tools: Figma",
       learning:
         "A standard measurement and sizing to place elements in a web page",
     },
     {
       title: "Data Science",
+      tools: "Tools: Google Colab, Jupyter Notebook",
       short_description:
-        "This journey started in 2017 when I discover a interesting fact of participating in a compitition. This helps my to think fast and search for optimized solution under pressure.",
-      language: "C++",
-      learning: "Time and space complexity reduction",
+        "I have staring learning data science to understand the data and make a decision based on that. Besides, I have started working on a project to undestand the how Panda library, Numpy, Matplotlib, Seaborn works.",
+      language: "Language: Python",
+      learning: "Web Scriping, Data Analysis and Cleaning, Data Visualization",
     },
     {
-      title: "Data Science",
+      title: "Project Course",
       short_description:
-        "This journey started in 2017 when I discover a interesting fact of participating in a compitition. This helps my to think fast and search for optimized solution under pressure.",
-      language: "C++",
-      learning: "Time and space complexity reduction",
-    },
-    {
-      title: "UI Design",
-      short_description: "A preliminary knowledge of create a design",
-      tools: "Figma",
+        " A project of similarity search between text and image frames using vector embeddings and cosine similarity formula where a video will be converted to image frames to extract results among them.",
+      language: "Language: Python",
       learning:
-        "A standard measurement and sizing to place elements in a web page",
+        "CLIP model, Voxel51 computer vision tool, Pinecone vector database, Docker",
+    },
+    {
+      title: "Artificial Intelligence",
+      short_description:
+        "A preliminary knowledge of algorithms to apply on greedy problems and decision making. Additionally, I short introduction with generative AI which is the main interting part of this leaning.",
+      language: "Language: Python",
+      learning:
+        "A process making best decision amoung anormous possible states, optimized approch",
     },
   ];
 

@@ -15,20 +15,20 @@ const MyProjectsPage = () => {
   const [projectInModal, setProjectInModal] = useState({});
   const [openModal, setOpenModal] = useState(false);
 
-const handleOpenModal = ({slide1, slide2, slide3}) => {
-  setOpenModal(!openModal);
+  const handleOpenModal = ({ slide1, slide2, slide3 }) => {
+    setOpenModal(!openModal);
     setProjectInModal({
       slide1,
       slide2,
       slide3,
-    });    
-  }
+    });
+  };
 
-const handleCloseModal = () => {
-  setOpenModal(!openModal);
+  const handleCloseModal = () => {
+    setOpenModal(!openModal);
     setProjectInModal({});
     // console.log(openModal);
-  }
+  };
 
   const settings = {
     className: "center",
@@ -87,6 +87,8 @@ const handleCloseModal = () => {
                 {each.live_site && (
                   <div className={styles.single_link_container}>
                     <Link
+                      passHref={true}
+                      target="_blank"
                       className={styles.link_decoration}
                       href={each.live_site}
                     >
@@ -132,7 +134,7 @@ const handleCloseModal = () => {
                     src={projectInModal.slide1}
                     alt=""
                     sizes="100%"
-            priority={true}
+                    priority={true}
                     className={styles.slider_image_design}
                   />
                 </div>
@@ -141,7 +143,7 @@ const handleCloseModal = () => {
                     src={projectInModal.slide2}
                     alt=""
                     sizes="100%"
-            priority={true}
+                    priority={true}
                     className={styles.slider_image_design}
                   />
                 </div>
@@ -150,7 +152,7 @@ const handleCloseModal = () => {
                     src={projectInModal.slide3}
                     alt=""
                     sizes="100%"
-            priority={true}
+                    priority={true}
                     className={styles.slider_image_design}
                   />
                 </div>

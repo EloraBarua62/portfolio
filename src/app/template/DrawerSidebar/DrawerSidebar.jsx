@@ -15,10 +15,14 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 // `${styles.sidebar_section} ${openLeftSidebar ? styles.open : styles.close}`;
 
-const DrawerSidebar = ({openLeftSidebar}) => {
-  console.log(openLeftSidebar)
+const DrawerSidebar = ({ openLeftSidebar }) => {
+  console.log(openLeftSidebar);
   return (
-    <div className={`${styles.sidebar_section} ${openLeftSidebar? styles.open: styles.close}`}>
+    <div
+      className={`${styles.sidebar_section} ${
+        openLeftSidebar ? styles.open : styles.close
+      }`}
+    >
       {/* Sidebar header */}
       <div className={styles.profile_section}>
         {/* Profile picture */}
@@ -100,8 +104,9 @@ const DrawerSidebar = ({openLeftSidebar}) => {
         {/* Download cv */}
         <div className={styles.resume_download}>
           <Link
-            href="files/resume.pdf"
+            passHref={true}
             target="_blank"
+            href="files/resume.pdf"
             download
             style={{ textDecoration: "none" }}
           >
@@ -114,14 +119,26 @@ const DrawerSidebar = ({openLeftSidebar}) => {
 
       {/* Footer section */}
       <div className={styles.footer_section}>
-        <div className={styles.icon}>
+        <Link
+          href="https://www.linkedin.com/in/elora-barua-684157206/"
+          passHref={true}
+          target="_blank"
+          style={{ textDecoration: "none" }}
+          className={styles.icon}
+        >
           <h4>LinkedIn</h4>
           <FaLinkedinIn />
-        </div>
-        <div className={styles.icon}>
+        </Link>
+        <Link
+          href="https://github.com/EloraBarua62"
+          passHref={true}
+          target="_blank"
+          style={{ textDecoration: "none" }}
+          className={styles.icon}
+        >
           <h4>Github</h4>
           <FaGithub />
-        </div>
+        </Link>
       </div>
     </div>
   );
