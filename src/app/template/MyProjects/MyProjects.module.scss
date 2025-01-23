@@ -27,7 +27,7 @@
     height: 500px;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
 
     @media (min-width: 834px) {
       height: 350px;

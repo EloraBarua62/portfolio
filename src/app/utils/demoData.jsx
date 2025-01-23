@@ -9,6 +9,11 @@ import interior from "../../../public/files/Sol Art.png";
 import dhurva_slide1 from "../../../public/dhurva_slider/dhruva_slide1.png";
 import dhurva_slide2 from "../../../public/dhurva_slider/dhruva-slide2.png";
 import dhurva_slide3 from "../../../public/dhurva_slider/dhruva-slide3.png";
+
+// slider: Dhurva
+import apparel_slide1 from "../../../public/apparel_slider/apparel_slider1.png";
+import apparel_slide2 from "../../../public/apparel_slider/apparel_slider2.png";
+import apparel_slide3 from "../../../public/apparel_slider/apparel_slider3.png";
 // slider: Compact
 import compact_slide1 from "../../../public/compact_slider/compact_slide1.png";
 import compact_slide2 from "../../../public/compact_slider/compact_slide2.png";
@@ -152,9 +157,9 @@ export const myProjects = [
     title: "Apparel",
     class: "apparel",
     webimage: apparel,
-    slide1: apparel,
-    slide2: apparel,
-    slide3: apparel,
+    slide1: apparel_slide1,
+    slide2: apparel_slide2,
+    slide3: apparel_slide3,
     short_details:
       "A platform to purchase and supply clothes in different categories. Multiple vendors can exhibit and retail various products.",
     details:

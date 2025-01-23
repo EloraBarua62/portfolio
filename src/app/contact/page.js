@@ -45,7 +45,6 @@ const Contact = () => {
                   target="_blank"
                   className={styles.value}
                   href="https://www.linkedin.com/in/elora-barua-684157206/"
-                  target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "white" }}
                 >

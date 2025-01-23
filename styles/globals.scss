@@ -153,9 +153,9 @@ body {
             }
           }
           .apparel {
-            transition: 2s;
+            transition: 1s;
             &:hover {
-              transform: translateY(-5px);
+              transform: translateY(-90%);
             }
           }
           .compact {
